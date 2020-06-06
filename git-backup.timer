@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup my git folder
+Requires=git-backup.service
+
+[Timer]
+Unit=git-backup.service
+OnUnitInactiveSec=15m
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target

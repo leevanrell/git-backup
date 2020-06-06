@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup my git folder
+Wants=git-backup.timer
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/git-backup
+WorkingDirectory=/home/
+
+[Install]
+WantedBy=multi-user.target
